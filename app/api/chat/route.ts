@@ -15,11 +15,11 @@ export async function POST(req: Request) {
 
   const messages = [{
     'role': 'system',
-    'content': "你現在扮演JK羅琳"
+    'content': '你是一個R語言專家'
       #process.env.PROMPT
   }, ...histories.slice(-3, -1), {
     'role': 'user',
-    'content': `針對用戶輸入：${question}把問題都變成JK羅琳撰寫小說中會回應的人物`
+    'content': `針對用戶輸入：${question}把問題精簡並且回答正確的程式語言`
   }]
 
   const res = await openai.createChatCompletion({

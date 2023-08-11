@@ -16,7 +16,6 @@ export async function POST(req: Request) {
   const messages = [{
     'role': 'system',
     'content': '你是一個R語言專家'
-      #process.env.PROMPT
   }, ...histories.slice(-3, -1), {
     'role': 'user',
     'content': `針對用戶輸入：${question}把問題精簡並且回答正確的程式語言`
